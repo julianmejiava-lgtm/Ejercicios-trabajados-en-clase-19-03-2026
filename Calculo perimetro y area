@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double lado,bace,altura,area,perimetro;
+        Console.WriteLine("Ingrese el valor del lado del cuadrado: ");
+        lado = double.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese el valor de la base del rectangulo: ");
+        bace = double.Parse(Console.ReadLine());
+        Console.WriteLine("Ingrese el valor de la altura del rectangulo: ");
+        altura = double.Parse(Console.ReadLine());
+        
+        perimetro = lado*4;
+        area = bace*altura;
+        
+        Console.WriteLine($"el perimetro del cuadrado es: {perimetro}");
+        Console.WriteLine($"El area del rectangulo es: {area}");
+    }
+}
