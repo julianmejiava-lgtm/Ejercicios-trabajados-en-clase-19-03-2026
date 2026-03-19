@@ -1,0 +1,32 @@
+using System;
+class triangulos
+{
+    static void Main()
+    {
+        Console.Write("ingresa el lado A: ");
+        double a = double.Parse(Console.ReadLine());
+        
+        Console.Write("ingresa el lado B: ");
+        double b = double.Parse(Console.ReadLine());
+        
+        Console.Write("ingresa el lado C: ");
+        double c = double.Parse(Console.ReadLine());
+        
+        if(a <=0 || b <=0 || c <=0 || a+b <=c || a+c <=b || b+c <=a)
+        {
+            Console.WriteLine("los lados no forma un triangulo");
+        }
+        else if (a== b && b ==c)
+        {
+            Console.WriteLine("el triangulo es equilatero");
+        }
+        else if(a == b || b==c || a==c )
+        {
+            Console.WriteLine("el triangulo es isoseles");
+        }
+        else
+        {
+            Console.WriteLine("el triangulo es escaleno");
+        }
+    }
+}
