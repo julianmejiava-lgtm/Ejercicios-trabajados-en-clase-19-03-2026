@@ -1,0 +1,83 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese el numero de filas: ");
+        int filas = int.Parse(Console.ReadLine());
+        Console.Write("Ingrese el numero de columnas: ");
+        int columnas = int.Parse(Console.ReadLine());
+
+        int[,] matriz_a = new int [filas, columnas];
+        int[,] matriz_b = new int [filas, columnas];
+        int[,] suma = new int [filas, columnas];
+        int[,] resta = new int [filas, columnas];
+        int[,] multiplicacion = new int [filas, columnas];
+       
+        //matriz a
+        Console.WriteLine("\n--- Matriz A ---");
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                Console.Write($"Ingrese valor para A[{i},{j}]: ");
+                matriz_a[i, j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        //matriz b
+        Console.WriteLine("\n--- Matriz B ---");
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                Console.Write($"Ingrese valor para B[{i},{j}]: ");
+                matriz_b[i, j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        //suma
+        Console.WriteLine("\nSuma (Matriz A + B):");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                suma[i, j] = matriz_a[i, j] + matriz_b[i, j];
+                Console.Write(suma[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+        Console.ResetColor();
+
+        //resta
+        Console.WriteLine("\nResta (Matriz A - B):");
+        Console.ForegroundColor = ConsoleColor.Green;
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                resta[i, j] = matriz_a[i, j] - matriz_b[i, j];
+                Console.Write(resta[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+        Console.ResetColor();
+        
+        //multiplicacion
+        Console.WriteLine("\nmultiplicacion (Matriz A * B):");
+        Console.ForegroundColor = ConsoleColor.Red;
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                multiplicacion[i, j] = matriz_a[i, j] * matriz_b[i, j];
+                Console.Write(multiplicacion[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+        Console.ResetColor();
+       
+    }
+}
